@@ -73,8 +73,8 @@ int main() {
 
             do{
                 N = N + 2;
-                I1 = left_rectangle_method(a, b, N);
-                I2 = left_rectangle_method(a, b, N+2);
+                I1 = trapezoid_method(a, b, N);
+                I2 = trapezoid_method(a, b, N+2);
             }while(  fabs(I2-I1) > eps );
 
             printf("\n\nN=%u,  I1(N)=%.8lf\n", N, I1);
@@ -89,8 +89,8 @@ int main() {
 
             do{
                 N = N + 2;
-                I1 = left_rectangle_method(a, b, N);
-                I2 = left_rectangle_method(a, b, N+2);
+                I1 = simpson_method(a, b, N);
+                I2 = simpson_method(a, b, N+2);
             } while(  fabs(I2-I1) > eps );
 
             printf("\n\nN=%u,  I1(N)=%.8lf\n", N, I1);
